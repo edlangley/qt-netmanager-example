@@ -37,7 +37,7 @@ void MainWindow::doRequest(int reqType)
         m_reply = m_netManager->get(request);
         break;
     case REQ_POST:
-        m_reply = m_netManager->post(request, ui->headerText->toPlainText().toUtf8());
+        m_reply = m_netManager->post(request, ui->bodyText->toPlainText().toUtf8());
         break;
     default:
         return;
